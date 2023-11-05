@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Azucar",
+    "description": "Description 1",
+    "price": 19.99,
+    "thumbnail": "image1.jpg",
+    "code": "P001",
+    "stock": 100,
+    "category": "Productos Básicos",
+    "status": true
+  },
+  {
+    "id": 2,
+    "title": "New Product Title222",
+    "description": "New Product Description",
+    "price": 29.99,
+    "thumbnail": "https://example.com/new-product-thumbnail.jpg",
+    "code": "P001",
+    "stock": 50,
+    "category": "New Product Category",
+    "status": false
+  },
+  {
+    "id": 3,
+    "title": "Leche",
+    "description": "Description 3",
+    "price": 10.99,
+    "thumbnail": "image3.jpg",
+    "code": "P003",
+    "stock": 20,
+    "category": "Productos Básicos",
+    "status": true
+  },
+  {
+    "id": 4,
+    "title": "Aceite",
+    "description": "Description 4",
+    "price": 15.99,
+    "thumbnail": "image4.jpg",
+    "code": "P004",
+    "stock": 15,
+    "category": "Productos Básicos",
+    "status": true
+  },
+  {
+    "id": 5,
+    "title": "Yerba",
+    "description": "Description 2",
+    "price": 29.99,
+    "thumbnail": "image2.jpg",
+    "code": "P002",
+    "stock": 50,
+    "category": "Productos Básicos",
+    "status": true
+  },
+  {
+    "id": 6,
+    "title": "Galletitas",
+    "description": "Description 5",
+    "price": 16.99,
+    "thumbnail": "image5.jpg",
+    "code": "P005",
+    "stock": 35,
+    "category": "Productos Básicos",
+    "status": true
+  },
+  {
+    "id": 7,
+    "title": "Vinagre",
+    "description": "Description 6",
+    "price": 13.99,
+    "thumbnail": "image6.jpg",
+    "code": "P006",
+    "stock": 11,
+    "category": "Productos Básicos",
+    "status": true
+  },
+  {
+    "id": 8,
+    "title": "Arroz",
+    "description": "Description 7",
+    "price": 12.99,
+    "thumbnail": "image7.jpg",
+    "code": "P007",
+    "stock": 12,
+    "category": "Productos Básicos",
+    "status": true
+  },
+  {
+    "id": 9,
+    "title": "Fideos",
+    "description": "Description 8",
+    "price": 11.99,
+    "thumbnail": "image8.jpg",
+    "code": "P008",
+    "stock": 25,
+    "category": "Productos Básicos",
+    "status": true
+  },
+  {
+    "id": 10,
+    "title": "Product Title",
+    "description": "Product Description",
+    "price": 9.99,
+    "thumbnail": "https://example.com/product-thumbnail.jpg",
+    "code": "P0050",
+    "stock": 50,
+    "category": "Productos Básicos",
+    "status": true
+  }
+]
