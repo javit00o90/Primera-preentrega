@@ -78,32 +78,36 @@ class CartsManager {
 
     async addProductToCart(cartId, productId) {
         try {
-            let data;
-            let carts = [];
-            try {
-                data = await fs.readFile(this.filePath, 'utf8');
-                carts = JSON.parse(data);
-            } catch (error) {
-                await this.initializeCartFile();
-                data = await fs.readFile(this.filePath, 'utf8');
-                carts = JSON.parse(data);
-            }
+            const carts = await this.getCarts();
             const cartIndex = carts.findIndex(cart => cart.id === cartId);
+    
             if (cartIndex === -1) {
-                return "Carrito no encontrado.";
+                return { error: "Carrito no encontrado.", status: 404 };
             }
+    
             const cart = carts[cartIndex];
-            const productIndex = cart.products.findIndex(product => product.id === productId);
+    
+            const productData = await fs.readFile(path.join(__dirname, '..', 'files', 'products.json'), 'utf8');
+            const products = JSON.parse(productData);
+            const productIndex = products.findIndex(p => p.id === productId);
+    
             if (productIndex === -1) {
+                return { error: "Producto no encontrado.", status: 400 };
+            }
+    
+            const cartProductIndex = cart.products.findIndex(product => product.id === productId);
+    
+            if (cartProductIndex === -1) {
                 cart.products.push({ id: productId, quantity: 1 });
             } else {
-                cart.products[productIndex].quantity++;
+                cart.products[cartProductIndex].quantity++;
             }
+    
             await this.saveCartsToJSON(carts);
-            return "Producto agregado al carrito correctamente.";
+            return { message: "Producto agregado al carrito correctamente.", status: 200 };
         } catch (error) {
-            console.error('Error agregando producto al carrito:', error.message);
-            return "Error agregando producto al carrito.";
+            console.error('Error al agregar producto al carrito:', error.message);
+            return { error: "Error al agregar producto al carrito.", status: 500 };
         }
     }
 }
